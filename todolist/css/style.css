@@ -1,0 +1,277 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #e3f2fd;
+    background-image: radial-gradient(#d1d1d1 1.5px,transparent 1.5px);
+    /* 浅白色的小班点 */
+    background-size: 25px 25px;
+    font-family: "Microsoft YaHei";
+    color: #333;
+    padding: 40px;
+    /* 与浏览器周边隔开一点 */
+}
+
+/* 主界面 */
+.container{
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+/* logo图片 */
+.logo-container img{
+    height: 70px;
+    width: auto;
+}
+
+/* 承载logo的容器 */
+.logo-container{
+    align-items: center;
+    display: flex;
+    gap: 15px;
+    font-size: 40px;
+    font-weight: 900;
+}
+
+/* 星星装饰 */
+.decoration{
+    font-size: 30px;
+}
+
+/* 装饰左右的侧边栏 */
+.content-wrapper{
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+
+/* 占比空间分配 */
+.left-panel{
+    flex: 3;
+}
+
+.right-panel{
+    flex: 1;
+}
+
+/* 上方总输入框 */
+.input-group{
+    background-color: #fff;
+    border: 3px solid #000;
+    border-radius: 16px;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 5px 5px 0px #000;
+    margin-bottom: 30px;
+    height: 60px;
+}
+
+.input-fields{
+    flex: 1;
+    display: flex;
+}
+
+ input[type="text"],textarea{
+    width: 100%;
+    border: none;
+    padding: 0 20px;
+    font-size: 18px;
+    outline: none;
+    background: transparent;
+}  
+textarea{
+    height: 60px;
+    border-bottom: none;
+} 
+
+#add-btn {
+    width: 120px;
+    background-color: #f8bbd0;
+    border: none;
+    border-left: 3px solid #000;
+    height: 100%;
+    font-size: 19px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#add-btn:hover{
+    background-color: #f48fb1;
+    box-shadow:2px 2px 0px #000 ;
+}
+
+.note-content{
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 16px;
+    box-shadow: 7px 7px 0px #000;
+    overflow: hidden;
+}
+
+.note-header{
+    padding:15px 25px;
+    border-bottom: 3px solid #000;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+
+#note-list{
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+/* ----------食用方法--------------- */
+.guide-container{
+    color: #444;
+    /* padding: 20px 40px; */
+}
+
+.guide-title{
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.guide-subtitle{
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.guide-list{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.guide-list{
+    display: flex;
+    font-size: 15px;
+    color: #666;
+}
+
+.guide-icon{
+    width: 25px;
+    margin-right: 10px;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+.note-card{
+    background-color: #fff;
+    border:2px solid #000;
+    border-radius: 12px;
+    padding: 15px 20px;
+    box-shadow: 6px 6px 0px #000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-title{
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.card-text{
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.note-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.action-btn{
+    border: 2px solid #000;
+    border-radius: 6px;
+    padding: 4px 10px ;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #fff;
+    transition: 0.1s;
+}
+
+.action-btn.done{
+    background-color: #c8e6c9;
+}
+.action-btn.delete{
+    background-color: #ffcdd2;
+}
+
+.action-btn:hover{
+    transform: translate(2px,2px);
+    box-shadow: 2px 2px 0px #000;
+}
+
+
+/* 添加右侧效果 */
+.right-panel{
+    flex:0 0 140px;
+}
+
+.control-box{
+    background-color: #fff;
+    border: 3px solid #000;
+    border-radius: 16px;
+    box-shadow: 6px 6px 0px #000;
+    overflow: hidden;
+}
+
+.status-badge{
+    background-color: #a2e4d8;
+    padding: 15px;
+    text-align: center;
+    font-weight: 900;
+    font-size: 18px;
+    border-bottom: 3px solid #000;
+}
+
+.nav-btn{
+    width: 100%;
+    padding: 14px;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    background-color: #fff;
+    border-bottom: 2px solid #000;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.nav-btn.active{
+    background-color: #fbcfe8;
+}
+
+.nav-btn:hover{
+    background-color: #fbcfe8;
+}
+
+.nav-btn:last-child {
+    border-bottom: none;
+}

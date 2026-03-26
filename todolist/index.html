@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todolist-app</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo-container">
+                <img src="./images/todo.svg" alt="todo标签文本">
+                <span class="decoration">✨</span>
+            </div>
+        </header>
+
+        <main class="content-wrapper">
+            <section class="left-panel">
+                <div class="input-group">
+                    <div class="input-fields">
+                        <input type="text" id="note-title" placeholder="新增待办事项...">
+                    </div>
+                    <button id="add-btn">提交</button>
+                </div>
+                <div class="note-content">
+                    <div class="note-header">
+                        <span>今日事今日毕，勿将今事待明日! ☕</span>
+                    </div>
+                    <div id="note-list">
+                        <div class="guide-container">
+                            
+                            <p class="guide-title">添加你的第一个待办事项！📝</p>
+                            <div class="guide-content">
+                                <p class="guide-subtitle">食用方法 💡：</p>
+                                <ul class="guide-list">
+                                    <li><span class="guide-icon">✔</span> 所有提交操作支持Enter回车键提交</li>
+                                    <li><span class="guide-icon">✔</span> 拖拽Todo上下移动可排序(仅支持PC)</li>
+                                    <li><span class="guide-icon">✔</span> 双击上面的标语和 Todo 可进行编辑</li>
+                                    <li><span class="guide-icon">✔</span> 右侧的小窗口是快捷操作哦</li>
+                                    <li><span class="guide-icon">🔒</span> 所有的Todo数据存储在浏览器本地</li>
+                                    <li><span class="guide-icon">📝</span> 支持下载和导入，导入追加到当前序列</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div> 
+                </div>
+            </section>
+
+            <aside class="right-panel">
+                <div class="control-box">
+                    <div class="status-badge">开✨</div>
+                    <button class="nav-btn active">全部</button>
+                    <button id="clear-all" class="nav-btn">清除全部</button>
+                    <button id="trash-bag" class="nav-btn">回收站</button>
+                    <div class="import">
+                        <button id="import-btn" class="nav-btn">导入(txt/json)</button>
+                    </div>
+                </div>
+            </aside>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

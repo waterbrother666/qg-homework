@@ -1,0 +1,419 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* 全部文字 颜色 */
+body{
+    color: #333;
+    font: 14px/1.5 "Helvetica Neue","Microsoft Yahei";
+    background-color: #fff;
+}
+
+/* 取消下划线 */
+a{
+    text-decoration: none;
+    color: #b0b0b0;
+}
+
+/* 取消黑点 */
+li{
+    list-style: none;
+}
+
+.container{
+    width: 1226px; 
+    /* 顶部导航的官方宽度 */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.top1{
+    height: 40px;
+    background-color: #333;
+    font-size: 12px;   
+    display: flex;
+    align-items: center;
+}
+
+.top1 a:hover{
+    color: #fff;
+}
+
+/* 设置竖直的线 */
+.top1 span{
+    color: #424242;
+    margin: 0 0.5em;
+}
+
+
+/* 设置购物车 */
+/* 1.图标的颜色 */
+.buycar span{
+    color: #b0b0b0;
+} 
+
+.buycar{
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #424242;
+    text-align: center;
+    margin-left: 200px;
+}
+
+.mainheader{
+    width: 1226px;
+    margin: 0 auto;
+    height: 100px;
+    display: flex;
+    align-items: center; 
+    /* 对子元素进行一个居中的排序 */
+}
+
+
+/* 对承载logo图片的父元素进行一个设置，设置宽高，并且使用flex布局来让logo水平和竖直都居中。 */
+.logo{
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    /* 水平 */
+    align-items: center;
+    /* 竖直 */
+}
+
+/* 对图片本身进行一个设置 */
+.logo img{
+    width: 84px;
+    height: 84px;
+    border-radius: 20px;
+}
+
+.navlist{
+    width: 685px;
+    padding-left: 230px;
+    white-space: nowrap;
+}
+
+.navlist ul{
+    display: flex;
+}
+
+.navlist ul li a{
+    color:#333;
+    font-size: 15px;
+    padding: 0 10px;
+    transition: color 0.2s ease;
+}
+
+.navlist ul li a:hover{
+    color: #ff6700;
+}
+
+.search{
+    width: 296px;
+    height: 50px;
+    display: flex;
+    margin-left: 270px;
+}
+
+.search input{
+    border: 1px solid #e0e0e0;
+    transition: all 0.2s;
+}
+
+
+.search button{
+    width: 52px;
+    height: 50px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-left: none ; 
+    /* 变得更加美观 */
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.3s;
+}
+
+.search input:focus,
+.search input:focus + button{
+    border-color: #ff6700;
+}
+
+.search input:hover,
+.search input:hover + button{
+    border-color: #ff6700;
+}
+
+
+.search button:hover{
+    background-color: #ff6700;
+    color: #fff;
+    border-color: #ff6700;
+}
+
+.hero-container{
+    width: 1226px;
+    margin: 0 auto;
+    height: 460px;
+    position: relative;
+    margin-top: 10px;
+    /* background: url(../images/1.png) no-repeat center; */
+    background-color: #eee; 
+    background-size: cover;
+    overflow: hidden;
+    /* 设置一个底色 */
+}
+
+.side-category{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 234px;
+    height: 460px;
+    background-color: rgba(0,0,0,0.5);
+    padding: 20px 0;
+    z-index: 300;
+}
+
+/* 分类选项空隙的设置 */
+.side-category ul li{
+    height: 45px;
+    line-height: 45px;
+}
+
+.side-category ul li a{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.side-category span{
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.8);
+} 
+
+.side-category ul li a:hover{
+    background-color: #ff6700;
+}
+
+/* 保证箭头在上面 */
+.change-photo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 150;
+    
+}
+
+.change-photo span{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 41px;
+    height: 69px;
+    line-height: 69px;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+/* 确定方向箭头的位置 */
+.change-photo .xiaoyu{
+    left: 234px;
+}
+
+.change-photo .dayu{
+    right: 0;
+}
+
+.change-photo span:hover{
+    background-color: rgba(0,0,0,0.4);
+    color: #fff;
+}
+
+
+.icontfont{
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 4px ;
+}
+
+.sub-hero-container{
+    display: flex;
+    margin-top: 14px;
+    justify-content: space-between;
+    width: 1226px;
+    margin-bottom: 26px ;
+    margin: 14px auto;
+}
+
+.channel{
+    width: 234px;
+    height: 170px;
+    background: #5f5750;
+    padding:3px;
+}
+
+.channel ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.channel ul li{
+    width: 76px;
+    height: 82px;
+    position: relative;
+}
+
+.channel ul li a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    height: 100%;
+    font-size: 14px;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    /* 为接下来的鼠标点击变清晰做过度 */
+}
+
+.channel ul li a:hover{
+    opacity: 1;
+}
+
+.channel ul li a .iconfont{
+    font-size: 24px;
+    margin-bottom: 4px;
+}
+
+.channel li::after{
+    content: "";
+    position: absolute;
+    top: 6px;
+    right: 0;
+    width: 1px;
+    height: 70px;
+    background: #665e57;
+}
+
+.channel ul li:nth-child(3)::after{
+    display: none;
+}
+
+.channel ul li:nth-child(6)::after{
+    display: none;
+}
+
+.channel2{
+    width: 978px;
+    height: 170px;
+    /* 1226-234-14 */
+    margin-left: 14px;
+}
+
+.adchannel2{
+    display: flex;
+    justify-content: space-between;
+}
+
+.adchannel2 li {
+    width: 316px;
+    height: 170px;
+    transition: all 0.3s ease;
+    /* 给一个几乎看不见的初始阴影，渐变会更自然 */
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+
+.adchannel2 li a{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+
+.adchannel2 li a img{
+    width: 100%;
+    height: 100%;
+    height: 170px;
+    display: block;
+} 
+
+.adchannel2 li:hover{
+    box-shadow: 0px 15px 30px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+}
+
+.categorydetail{
+    display: none;
+    /* 初始的时候能隐藏 */
+    position: absolute;
+    top: 0;
+    left: 234px;
+    width: 530px;
+    height: 460px;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.18);
+    z-index: 200;
+    /* 保证能悬浮在轮播图片上面 */
+    padding: 20px;
+    /* 保证打开侧边栏目时 显示的的内容不顶住边框 */
+}
+
+.detail-list {
+    display: flex;              
+    flex-wrap: wrap;            
+    align-content: flex-start;  
+}
+.detail-item {
+    width: 240px;               
+    height: 76px;               
+    display: flex;             
+    align-items: center;       
+    padding: 10px;              
+    cursor: pointer;       
+}
+
+/* 商品图片 */
+.detail-item img { 
+    width: 40px;                
+    height: 40px; 
+    margin-right: 10px;  
+}
+
+/* 商品文字标题 */
+.detail-item span { 
+    color: #333;
+    font-size: 14px;   
+    transition: all 0.2s;     
+}
+
+/* 悬停变色 */
+.detail-item span:hover { 
+    color: #ff6700;
+    
+}
+
+
+#banner-img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    transition: all 0.5s linear;
+}
