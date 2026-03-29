@@ -20,11 +20,31 @@
                 <div class="input-group">
                     <div class="input-fields">
                         <input type="text" id="note-title" placeholder="新增待办事项...">
+                        <div class="priority-wrapper">
+                            <div class="select-container">
+                                <select class="priority-select" id="priority-select">
+                                    <option value="high">🔴高</option>
+                                    <option value="medium">🟡中</option>
+                                    <option value="low">🟢低</option>
+                                </select>
+                            </div>
+
+                            <div class="select-container">
+                                <select id="category-select" class="category-select">
+                                    <option value="study">📚 学习</option>
+                                    <option value="work">💼 工作</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
                     <button id="add-btn">提交</button>
                 </div>
+                <div class="search-group">
+                    <span class="search-icon">🔍</span>
+                        <input type="text" id="search-input" placeholder="搜索你想要的笔记...">
+                </div>
                 <div class="note-content">
-                    <div class="note-header">
+                   <div class="note-header">
                         <span>今日事今日毕，勿将今事待明日! ☕</span>
                     </div>
                     <div id="note-list">
@@ -50,13 +70,14 @@
 
             <aside class="right-panel">
                 <div class="control-box">
-                    <div class="status-badge">开✨</div>
-                    <button class="nav-btn active">全部</button>
+                    <div id="status-bar" class="status-badge">开✨</div>
+                    <button id="all-btn" class="nav-btn active">全部</button>
                     <button id="clear-all" class="nav-btn">清除全部</button>
                     <button id="trash-bag" class="nav-btn">回收站</button>
                     <div class="import">
                         <button id="import-btn" class="nav-btn">导入(txt/json)</button>
                     </div>
+                    <button id="lang-btn" class="nav-btn">English / 简体中文</button>
                 </div>
             </aside>
         </main>

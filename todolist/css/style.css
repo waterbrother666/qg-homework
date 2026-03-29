@@ -79,6 +79,9 @@ body{
 .input-fields{
     flex: 1;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
  input[type="text"],textarea{
@@ -123,6 +126,8 @@ textarea{
 }
 
 .note-header{
+    width: 100%;
+    display: flex;
     padding:15px 25px;
     border-bottom: 3px solid #000;
     font-weight: bold;
@@ -275,3 +280,119 @@ textarea{
 .nav-btn:last-child {
     border-bottom: none;
 }
+
+
+/* -------搜索-------- */
+.search-group{
+    background-color: #fff;
+    border: 3px solid #000;
+    border-radius: 10px ;
+    display: flex;
+    align-items: center;
+    padding:0 15px;
+    margin-bottom: 20px;
+    box-shadow: 4px 4px 0px #000;
+    height: 50px;
+}
+
+.search-icon{
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.search-input{
+    flex:1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background :transparent;
+}
+/* ------------------ */
+
+/* --------优先级-按钮部分------ */
+.note-card.priority-high{
+    border-left: 5px solid #ff4d4f;
+    background-color: #fff1f0;
+}
+
+.note-card.priority-medium{
+    border-left: 5px solid #ffc107;
+    background-color: #fffbe6;
+}
+
+.note-card.priority-low{
+    border-left: 5px solid #52c41a;
+    background-color: #f6ffed;
+}
+
+.done-style{
+    opacity: 0.6;
+    border-left-color: #ccc !important;
+}
+/* ----------------------------- */
+
+/* ---------优先级-外框部分以及分类组合---------*/
+.priority-wrapper{
+    display: flex;
+    gap: 12px;
+    padding: 0 10px;
+    align-items: center;
+}
+
+.select-container{  
+    position: relative;
+    flex: 0 1 auto;
+    min-width: 100px;
+}
+
+
+.priority-select,.category-select{
+    width: 100%;
+    display: block;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    
+    /* -------- */
+
+    padding: 8px 30px 8px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    height: 40px;
+}
+
+.priority-select:hover,.category-select:hover{
+    border-color: #ffc107;
+    background-color: #fffdf5;
+}
+
+.priority-select:focus,.category-select:focus{
+    border-color: #ffc107;
+    box-shadow:0 0 0 3px rgba(255, 193, 7, 0.1);
+}
+
+.select-container::after{
+    content:'▼';
+    font-size: 10px;
+    color: #aaa;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.select-container:hover::after{
+    color: #ffc107;
+    transform: translateY(-70%);
+}
+
+/* ------------------------------ */
